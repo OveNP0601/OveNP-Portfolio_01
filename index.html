@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="Personal portfolio">
+  <title>My Portfolio — YOUR NAME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090b12;--panel:#111521;--text:#f4f5f8;--muted:#9299aa;--line:#252b3a;--lime:#c6ff5e;--cyan:#65e6dc}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'Kanit',sans-serif;line-height:1.65;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-1}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(9,11,18,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font:600 15px 'IBM Plex Mono';letter-spacing:.04em}.brand b{color:var(--lime)}
+    .links{display:flex;gap:30px;color:var(--muted);font-size:14px}.links a:hover{color:var(--lime)}
+    .nav-cta{border:1px solid var(--line);padding:9px 16px;border-radius:5px;font:500 11px 'IBM Plex Mono';letter-spacing:.08em}.nav-cta:hover{border-color:var(--lime);color:var(--lime)}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:50px;padding:90px 0 100px}
+    .eyebrow{font:500 12px 'IBM Plex Mono';color:var(--lime);letter-spacing:.15em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+    .eyebrow:before{content:"";width:30px;height:1px;background:var(--lime)}
+    h1{font-size:clamp(54px,8vw,104px);line-height:.98;letter-spacing:-.045em;margin:24px 0;font-weight:600}
+    h1 span{color:var(--lime);display:block}
+    .hero-copy{max-width:550px;color:var(--muted);font-size:18px;font-weight:300}
+    .hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+    .btn{padding:13px 21px;border-radius:4px;font-weight:500;font-size:14px;display:inline-flex;align-items:center;gap:12px;transition:.2s}
+    .btn-primary{background:var(--lime);color:#10140a}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 35px #c6ff5e25}
+    .btn-ghost{border:1px solid var(--line);color:var(--text)}.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+    .visual{height:390px;position:relative;display:grid;place-items:center}
+    .orbit{width:310px;height:310px;border:1px solid #303849;border-radius:50%;position:absolute;animation:spin 24s linear infinite}
+    .orbit:before,.orbit:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 20px var(--lime)}
+    .orbit:before{top:37px;left:34px}.orbit:after{right:8px;bottom:80px;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .core{width:220px;height:260px;background:linear-gradient(145deg,#202a3b,#101521);border:1px solid #364055;border-radius:16px;display:flex;flex-direction:column;justify-content:space-between;padding:22px;box-shadow:0 25px 90px #0009;transform:rotate(-7deg)}
+    .core-top{font:11px 'IBM Plex Mono';color:var(--lime)}.core-mark{font:600 76px 'IBM Plex Mono';letter-spacing:-.12em;color:var(--text);line-height:1}
+    .core-bottom{font:10px 'IBM Plex Mono';color:var(--muted);display:flex;justify-content:space-between}
+    .float-tag{position:absolute;background:#171d2b;border:1px solid #303849;padding:9px 13px;border-radius:5px;font:11px 'IBM Plex Mono';color:var(--cyan)}
+    .tag-one{top:55px;right:0}.tag-two{bottom:50px;left:0;color:var(--lime)}
+    .section{padding:100px 0;border-top:1px solid rgba(255,255,255,.07)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:42px}
+    .kicker{font:11px 'IBM Plex Mono';letter-spacing:.14em;color:var(--lime)}
+    h2{font-size:clamp(34px,5vw,54px);line-height:1.1;margin:10px 0 0;font-weight:500;letter-spacing:-.025em}
+    .section-note{color:var(--muted);font-size:14px;max-width:300px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+    .about-text{font-size:20px;font-weight:300;color:#c5cad5}.about-text strong{color:var(--lime);font-weight:500}
+    .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .info{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:7px}
+    .info small{display:block;color:var(--muted);font:10px 'IBM Plex Mono';letter-spacing:.1em;margin-bottom:8px}.info span{font-size:15px}
+    .skills{display:flex;flex-wrap:wrap;gap:12px}
+    .skill{border:1px solid var(--line);background:var(--panel);padding:13px 18px;border-radius:4px;font:12px 'IBM Plex Mono';color:#dce1eb}
+    .skill:before{content:"✳";color:var(--lime);margin-right:10px}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:24px;min-height:300px;display:flex;flex-direction:column;transition:.25s}
+    .project:hover{transform:translateY(-6px);border-color:#819c48}
+    .project-top{display:flex;justify-content:space-between;color:var(--lime);font:12px 'IBM Plex Mono'}
+    .project-icon{height:105px;display:grid;place-items:center;font:54px 'IBM Plex Mono';color:#354052}
+    .project-type{font:10px 'IBM Plex Mono';letter-spacing:.1em;color:var(--cyan)}
+    .project h3{font-size:22px;font-weight:500;margin:8px 0}
+    .project p{font-size:13px;color:var(--muted);margin:0 0 18px}
+    .tech{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.tech span{font:10px 'IBM Plex Mono';color:#aeb5c4;border:1px solid #303849;padding:4px 7px}
+    .project-link{margin-top:18px;color:var(--lime);font:11px 'IBM Plex Mono'}
+    .contact{background:linear-gradient(135deg,#151d25,#101521);border:1px solid #303849;border-radius:10px;padding:clamp(28px,6vw,65px);display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .contact h2{max-width:600px}.contact p{color:var(--muted)}
+    .socials{display:flex;gap:20px;flex-wrap:wrap;margin-top:25px}.socials a{font:11px 'IBM Plex Mono';color:var(--cyan)}.socials a:hover{color:var(--lime)}
+    footer{padding:30px 0;color:#737b8d;font:10px 'IBM Plex Mono';display:flex;justify-content:space-between;gap:15px}
+    .error{color:#ff9b9b;padding:20px;border:1px solid #8a3c4a}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:75px 0;gap:20px}.visual{height:330px}.about-grid{grid-template-columns:1fr;gap:30px}.projects{grid-template-columns:1fr 1fr}.section{padding:75px 0}.contact{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.wrap{width:min(100% - 32px,1120px)}.links{gap:13px;font-size:12px}.nav-cta{display:none}.hero{min-height:auto}.visual{height:290px}.orbit{width:240px;height:240px}.core{width:180px;height:220px}.core-mark{font-size:62px}.tag-one{right:0}.projects{grid-template-columns:1fr}.section-head{display:block}.section-note{margin-top:15px}.info-grid{gap:8px}.info{padding:14px}footer{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav-inner">
+    <a class="brand" href="#home">PORTFOLIO<span><b>.</b></span></a>
+    <div class="links"><a href="#about">ABOUT</a><a href="#skills">SKILLS</a><a href="#projects">WORK</a></div>
+    <a class="nav-cta" href="#contact">LET'S TALK ↗</a>
+  </div></nav>
+  <main class="wrap">
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">WELCOME TO MY WORLD</div>
+        <h1>MY<br><span>PORTFOLIO.</span></h1>
+        <p class="hero-copy" id="intro">กำลังโหลดข้อมูล...</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#projects">EXPLORE MY WORK ↗</a><a class="btn btn-ghost" href="#about">MORE ABOUT ME</a></div>
+      </div>
+      <div class="visual" aria-label="Abstract portfolio graphic">
+        <div class="orbit"></div><div class="core"><div class="core-top">CREATIVE / DEVELOPER</div><div class="core-mark">M<span style="color:var(--lime)">.</span></div><div class="core-bottom"><span>DESIGN</span><span>CODE_01</span></div></div>
+        <div class="float-tag tag-one">AVAILABLE TO CREATE ✳</div><div class="float-tag tag-two">THINK → DESIGN → BUILD</div>
+      </div>
+    </section>
+    <section class="section" id="about">
+      <div class="section-head"><div><div class="kicker">01 / WHO I AM</div><h2>ABOUT ME<span style="color:var(--lime)">.</span></h2></div><p class="section-note">A little introduction about the person behind the screen.</p></div>
+      <div class="about-grid"><p class="about-text" id="about-text">กำลังโหลด...</p><div class="info-grid">
+        <div class="info"><small>NAME</small><span id="name">—</span></div><div class="info"><small>ROLE</small><span id="role">—</span></div>
+        <div class="info"><small>STUDENT ID</small><span id="student-id">—</span></div><div class="info"><small>LOCATION</small><span id="location">—</span></div>
+      </div></div>
+    </section>
+    <section class="section" id="skills">
+      <div class="section-head"><div><div class="kicker">02 / WHAT I DO</div><h2>MY SKILLS<span style="color:var(--lime)">.</span></h2></div><p class="section-note">Tools and technologies I use to bring ideas to life.</p></div>
+      <div class="skills" id="skills-list"></div>
+    </section>
+    <section class="section" id="projects">
+      <div class="section-head"><div><div class="kicker">03 / SELECTED WORK</div><h2>FEATURED PROJECTS<span style="color:var(--lime)">.</span></h2></div><p class="section-note">Some things I've been working on. More coming soon.</p></div>
+      <div class="projects" id="projects-list"></div>
+    </section>
+    <section class="section" id="contact">
+      <div class="contact"><div><div class="kicker">04 / GET IN TOUCH</div><h2>HAVE A PROJECT IN MIND<span style="color:var(--lime)">?</span></h2><p>Let's make something awesome together.</p><div class="socials" id="socials"></div></div><a class="btn btn-primary" id="email-link" href="mailto:your.email@example.com">SAY HELLO ↗</a></div>
+    </section>
+  </main>
+  <footer class="wrap"><span>© <span id="year"></span> <span id="footer-name">MY PORTFOLIO</span></span><span>DESIGNED & BUILT WITH PASSION ✳</span></footer>
+  <script>
+    const $ = id => document.getElementById(id);
+    const safe = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    fetch("data.json?v=" + Date.now(), {cache:"no-store"})
+      .then(r => { if(!r.ok) throw new Error("ไม่พบไฟล์ data.json"); return r.json(); })
+      .then(data => {
+        document.title = `My Portfolio — ${data.name || "YOUR NAME"}`;
+        $("intro").textContent = data.intro || "";
+        $("about-text").innerHTML = safe(data.about || "").replace(/(พัฒนาเว็บไซต์|UI\/UX|เทคโนโลยี)/g, "<strong>$1</strong>");
+        $("name").textContent = data.name || "—"; $("role").textContent = data.role || "—";
+        $("student-id").textContent = data.studentId || "—"; $("location").textContent = data.location || "—";
+        $("footer-name").textContent = data.name || "MY PORTFOLIO";
+        $("skills-list").innerHTML = (data.skills || []).map(s => `<span class="skill">${safe(s)}</span>`).join("");
+        $("projects-list").innerHTML = (data.projects || []).map((p,i) => `
+          <article class="project"><div class="project-top"><span>${safe(p.number || String(i+1).padStart(2,"0"))} / PROJECT</span><span>↗</span></div>
+          <div class="project-icon">${["⌘","◈","✳","▧"][i%4]}</div><div class="project-type">${safe(p.type || "PROJECT")}</div>
+          <h3>${safe(p.name)}</h3><p>${safe(p.description)}</p>
+          <div class="tech">${(p.tech || []).map(t=>`<span>${safe(t)}</span>`).join("")}</div>
+          <a class="project-link" href="${safe(p.url || "#")}" target="_blank" rel="noopener">VIEW PROJECT ↗</a></article>`).join("");
+        $("socials").innerHTML = (data.socials || []).map(s=>`<a href="${safe(s.url)}" target="_blank" rel="noopener">${safe(s.label)} ↗</a>`).join("");
+        $("email-link").href = "mailto:" + (data.email || "your.email@example.com");
+        $("year").textContent = new Date().getFullYear();
+      })
+      .catch(err => { $("intro").innerHTML = `<span class="error">${safe(err.message)} — กรุณาวาง index.html และ data.json ไว้ในโฟลเดอร์เดียวกัน</span>`; });
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "name": "YOUR NAME",
+  "role": "นักศึกษา | Front-end Developer",
+  "tagline": "I BUILD DIGITAL EXPERIENCES.",
+  "intro": "ผมชอบสร้างเว็บไซต์ที่ดูดี ใช้งานง่าย และเปลี่ยนไอเดียให้กลายเป็นประสบการณ์ดิจิทัล",
+  "about": "สวัสดีครับ! ผมเป็นนักศึกษาที่สนใจด้านการพัฒนาเว็บไซต์ การออกแบบ UI/UX และเทคโนโลยีใหม่ ๆ กำลังเรียนรู้และพัฒนาทักษะผ่านการลงมือทำโปรเจกต์จริง",
+  "studentId": "YOUR STUDENT ID",
+  "email": "your.email@example.com",
+  "location": "Thailand",
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "UI/UX Design",
+    "Responsive Design",
+    "Git"
+  ],
+  "projects": [
+    {
+      "number": "01",
+      "name": "Coffee Shop Website",
+      "type": "WEB DESIGN / FRONT-END",
+      "description": "เว็บไซต์ร้านกาแฟที่ออกแบบให้เรียบง่าย ทันสมัย พร้อมแสดงเมนูและรายละเอียดสินค้า",
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "#"
+    },
+    {
+      "number": "02",
+      "name": "Personal Portfolio",
+      "type": "WEB DEVELOPMENT",
+      "description": "เว็บไซต์แนะนำตัวและรวบรวมผลงาน เพื่อแสดงทักษะและประสบการณ์ด้านการพัฒนาเว็บไซต์",
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "#"
+    },
+    {
+      "number": "03",
+      "name": "Coming Soon",
+      "type": "EXPERIMENTAL PROJECT",
+      "description": "พื้นที่สำหรับโปรเจกต์ถัดไปที่กำลังพัฒนาและทดลองไอเดียใหม่ ๆ",
+      "tech": [
+        "Creative",
+        "Learning"
+      ],
+      "url": "#"
+    }
+  ],
+  "socials": [
+    {
+      "label": "GITHUB",
+      "url": "https://github.com/"
+    },
+    {
+      "label": "INSTAGRAM",
+      "url": "https://instagram.com/"
+    },
+    {
+      "label": "FACEBOOK",
+      "url": "https://facebook.com/"
+    }
+  ]
+}
