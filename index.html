@@ -41,7 +41,7 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:25px 0;color:var
 <script>
 fetch("data.json?v="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("ไม่พบไฟล์ data.json");return r.json()}).then(function(d){
 var name=d.name||"สารันต์ สะบูม่วง";document.title="My Portfolio | "+name;
-document.getElementById("person-name").textContent=name;document.getElementById("info-name").textContent=name;document.getElementById("footer-name").textContent=name;document.getElementById("initials").textContent=name.trim().charAt(0)+".";
+document.getElementById("person-name").textContent=name;document.getElementById("info-name").textContent=name;document.getElementById("footer-name").textContent=name;
 document.getElementById("about-text").textContent=d.about||"";document.getElementById("student-id").textContent=d.studentId||"—";document.getElementById("email").textContent=d.email||"—";document.getElementById("location").textContent=d.location||"—";document.getElementById("age").textContent=d.age?d.age+" years old":"—";
 if(d.twitch){document.getElementById("twitch-link").href=d.twitch;document.getElementById("twitch-hero").href=d.twitch}if(d.steam)document.getElementById("steam-link").href=d.steam;
 document.getElementById("skill-tags").innerHTML=(d.skills||[]).map(function(s){var e=document.createElement("span");e.className="tag";e.textContent=s;return e.outerHTML}).join("");
