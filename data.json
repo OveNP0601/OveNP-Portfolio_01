@@ -1,11 +1,11 @@
 {
-  "name": "YOUR NAME",
-  "role": "นักศึกษา | Front-end Developer",
+  "name": "สารันต์ สะบูม่วง",
+  "role": "นักศึกษา | ITI",
   "tagline": "I BUILD DIGITAL EXPERIENCES.",
   "intro": "ผมชอบสร้างเว็บไซต์ที่ดูดี ใช้งานง่าย และเปลี่ยนไอเดียให้กลายเป็นประสบการณ์ดิจิทัล",
   "about": "สวัสดีครับ! ผมเป็นนักศึกษาที่สนใจด้านการพัฒนาเว็บไซต์ การออกแบบ UI/UX และเทคโนโลยีใหม่ ๆ กำลังเรียนรู้และพัฒนาทักษะผ่านการลงมือทำโปรเจกต์จริง",
-  "studentId": "YOUR STUDENT ID",
-  "email": "your.email@example.com",
+  "studentId": "1680701693",
+  "email": "sarun.sabo@bu.ac.th",
   "location": "Thailand",
   "skills": [
     "HTML",
@@ -13,7 +13,7 @@
     "JavaScript",
     "UI/UX Design",
     "Responsive Design",
-    "Git"
+   
   ],
   "projects": [
     {
@@ -40,17 +40,6 @@
       ],
       "url": "#"
     },
-    {
-      "number": "03",
-      "name": "Coming Soon",
-      "type": "EXPERIMENTAL PROJECT",
-      "description": "พื้นที่สำหรับโปรเจกต์ถัดไปที่กำลังพัฒนาและทดลองไอเดียใหม่ ๆ",
-      "tech": [
-        "Creative",
-        "Learning"
-      ],
-      "url": "#"
-    }
   ],
   "socials": [
     {
@@ -59,11 +48,11 @@
     },
     {
       "label": "INSTAGRAM",
-      "url": "https://instagram.com/"
+      "url": "https://www.instagram.com/oven_sarun/"
     },
     {
       "label": "FACEBOOK",
-      "url": "https://facebook.com/"
+      "url": "https://www.facebook.com/oven.sarun"
     }
   ]
 }
